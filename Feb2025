@@ -60,7 +60,6 @@
     <script>
         function sayYes() {
             alert('Yay! I can’t wait! ❤️');
-            window.location.href = 'your-surprise.html'; // Redirect to a special page
         }
 
         function askAgain() {
