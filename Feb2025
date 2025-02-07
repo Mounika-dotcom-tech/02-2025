@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+        .images img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 10px;
+        }
+        .buttons button {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .yes-btn {
+            background-color: #ff4d4d;
+            color: white;
+        }
+        .no-btn {
+            background-color: #666;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Will You Be My Valentine? ❤️</h2>
+        <div class="images">
+            <img src="your-image-1.jpg" alt="Picture 1">
+            <img src="your-image-2.jpg" alt="Picture 2">
+        </div>
+        <p>You make my world brighter, and I’d love to spend this Valentine’s Day with you!</p>
+        <div class="buttons">
+            <button class="yes-btn" onclick="sayYes()">Yes</button>
+            <button class="no-btn" onclick="askAgain()">No</button>
+        </div>
+    </div>
+
+    <script>
+        function sayYes() {
+            alert('Yay! I can’t wait! ❤️');
+            window.location.href = 'your-surprise.html'; // Redirect to a special page
+        }
+
+        function askAgain() {
+            let questions = [
+                "Are you sure? 🥺",
+                "Really sure? 😢",
+                "Do you not love me? 😭",
+                "You know I adore you, right? 💖",
+                "Can you resist this face? 🥰"
+            ];
+            for (let i = 0; i < questions.length; i++) {
+                if (!confirm(questions[i])) {
+                    alert('I knew you’d say Yes! 😍');
+                    sayYes();
+                    return;
+                }
+            }
+            alert('Okay... but I still love you! 💔');
+        }
+    </script>
+</body>
+</html>
